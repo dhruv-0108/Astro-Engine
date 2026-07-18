@@ -3,117 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astro-Engine — Decode Your Celestial Blueprint (Coming Soon)</title>
-  <meta name="description" content="Astro-Engine is coming soon. Enter your details to get a free, detailed PDF analysis of your life condition and planetary alignments upon launch.">
+  <title>Astro-Engine — Premium Vedic Astrology & Decision Research Platform</title>
+  <meta name="description" content="A structured, source-cited calculation engine transforming thousands of classical rules into precise interactive reports.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Space Background Overlay -->
+  <!-- Space Background (Neutral Light Overlay) -->
   <div class="space-bg"></div>
 
   <!-- Navigation Header -->
   <header>
-    <div class="nav-container">
+    <div class="container nav-container">
       <div class="logo">
-        🪐 Astro-Engine <span class="badge">COMING SOON</span>
+        Astro-Engine <span class="badge">Research Beta</span>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#features" class="active">Features</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#login">Login</a></li>
+        </ul>
+      </nav>
       <a href="#join-waitlist" class="btn btn-primary">Join Waitlist</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <main>
-    <section class="hero-section">
+    <section class="container hero-section">
       <div class="hero-content">
-        <h1>Decode Your <span class="gradient">Celestial Blueprint</span></h1>
-        <p class="subtitle">A next-generation astrological decision-support system. Get detailed PDF reports citing classical texts comprehensively and transparently.</p>
-        
-        <div class="launch-badge">🚀 Launching soon. Get your detailed analysis report for free.</div>
+        <h1>Know Your Timing.<br>Not Your Fortune.</h1>
+        <p class="subtitle">Thousands of classical Vedic astrology rules transformed into interactive reports, geographical indices, and precise timing tools for researchers.</p>
+        <div class="hero-ctas">
+          <a href="#join-waitlist" class="btn btn-primary">Generate My Birth Report</a>
+          <a href="#features" class="btn btn-secondary">See Demo Features</a>
+        </div>
       </div>
 
-      <!-- Waitlist Form (Glassmorphic) -->
-      <div class="glass-panel" id="join-waitlist">
-        <h2>Reserve Free Access</h2>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Enter your details to be the first to receive your personalized PDF report upon launch.</p>
-        <form id="waitlist-form">
-          <div class="form-group">
-            <label for="user-name">Full Name</label>
-            <input type="text" id="user-name" placeholder="John Doe" required>
+      <!-- Right Side: Bloomberg style report preview in Laptop Mockup -->
+      <div class="laptop-mockup">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div class="form-group">
-            <label for="user-email">Email Address</label>
-            <input type="email" id="user-email" placeholder="john@example.com" required>
+          <span class="mockup-title">ASTROLOGICAL ANALYSIS REPORT — IND-D9-302</span>
+          <span></span>
+        </div>
+        <div class="report-preview">
+          <div class="report-meta">
+            <span>METRIC STATUS</span>
+            <span>DOCUMENT REF: BPHS-CH24</span>
+            <span>RUN ID: #98442</span>
           </div>
-          <div class="form-group">
-            <label for="has-birth-details">Do you know your exact birth time & location?</label>
-            <select id="has-birth-details">
-              <option value="yes">Yes, I have my exact birth details</option>
-              <option value="no">No (I prefer Numerology fallback)</option>
-            </select>
+          <div class="report-body">
+            <h3>Calculated Planetary Alignments</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 1rem; color: var(--text-secondary);">Astronomical coordinates mapped to classical strength indices (Shadbala).</p>
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Planet</th>
+                  <th>Rasi Placement</th>
+                  <th>Shadbala Strength</th>
+                  <th>Active Yogas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Saturn</strong></td>
+                  <td>Libra (Exalted, 7H)</td>
+                  <td>1.45 (High)</td>
+                  <td>Sasa Mahapurusha</td>
+                </tr>
+                <tr>
+                  <td><strong>Jupiter</strong></td>
+                  <td>Sagittarius (Own, 9H)</td>
+                  <td>1.80 (Vargottama)</td>
+                  <td>Hamsa, Gajakesari</td>
+                </tr>
+                <tr>
+                  <td><strong>Mars</strong></td>
+                  <td>Leo (10H)</td>
+                  <td>1.15 (Dig Bala)</td>
+                  <td>Ruchaka Yoga</td>
+                </tr>
+                <tr>
+                  <td><strong>Mercury</strong></td>
+                  <td>Virgo (Exalted, 8H)</td>
+                  <td>1.30 (Strong)</td>
+                  <td>Bhadra Yoga</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Join the Waitlist</button>
-        </form>
-        <div id="waitlist-success" class="hidden success-box">
-          ✨ You've successfully joined the waitlist! We will notify you as soon as your report is ready.
         </div>
       </div>
     </section>
 
-    <!-- Key Upcoming Features Showcase -->
-    <section class="features-section" id="features">
-      <div class="section-header">
-        <h2>What We're Building</h2>
-        <p>Astro-Engine replaces static, black-box predictions with interactive, source-cited expert engines.</p>
+    <!-- Section 1: Life Timeline (White Section) -->
+    <section class="white-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Life Potential Timeline</h2>
+          <p>A structured mapping of Vimshottari Mahadasha transitions, identifying core periods of stability and professional restructuring.</p>
+        </div>
+
+        <div class="editorial-card timeline-widget">
+          <div class="timeline-visual">
+            <div class="timeline-row" data-age="20">
+              <span class="age-label">Age 20</span>
+              <span class="dasha-label">Venus-Rahu</span>
+              <span class="status-pill transition">Transition</span>
+            </div>
+            <div class="timeline-row active" data-age="29">
+              <span class="age-label">Age 29</span>
+              <span class="dasha-label">Sun-Sun</span>
+              <span class="status-pill transition">Transition</span>
+            </div>
+            <div class="timeline-row" data-age="35">
+              <span class="age-label">Age 35</span>
+              <span class="dasha-label">Sun-Saturn</span>
+              <span class="status-pill challenge">Challenge</span>
+            </div>
+            <div class="timeline-row" data-age="45">
+              <span class="age-label">Age 45</span>
+              <span class="dasha-label">Moon-Jupiter</span>
+              <span class="status-pill growth">Growth</span>
+            </div>
+          </div>
+
+          <div class="timeline-detail-panel" style="padding-left: 2rem; border-left: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+              <h4 id="detail-age">Age 29</h4>
+              <span class="status-pill transition" id="detail-status">Transition</span>
+            </div>
+            <p style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem;" id="detail-dasha">Sun-Sun Period</p>
+            <p id="detail-body">A major shift in professional authority. The 10th house is strongly activated, initiating a multi-year restructuring process of your career status and public responsibilities.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">📈</div>
-          <h3>Life Potential Timeline</h3>
-          <p>An interactive life timeline mapping growth, stable, and transition phases using Vimshottari and Yogini dashas without false certainty.</p>
+    <!-- Section 2: Career Compass (Gray Section) -->
+    <section class="gray-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Career Compass</h2>
+          <p>Evaluating compatibility vectors across strategic, execution, analytical, and relational quadrants based on planetary strengths.</p>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">🗺️</div>
-          <h3>Relocation Suitability Map</h3>
-          <p>A colored global map displaying career, money, marriage, and peace scores for any country based on 9th/12th house transits and D4 alignments.</p>
+        <div class="career-widget">
+          <div class="compass-grid">
+            <div class="quadrant">
+              <span class="quad-title">Strategy & Growth</span>
+              <span class="quad-score">94</span>
+              <span class="quad-desc">Strong 9th and 10th lord connections. Favorable for product strategy and consulting.</span>
+            </div>
+            <div class="quadrant">
+              <span class="quad-title">Analytical Research</span>
+              <span class="quad-score">88</span>
+              <span class="quad-desc">Exalted Mercury in 8th house. Ideal for scientific study and data architecture.</span>
+            </div>
+            <div class="quadrant">
+              <span class="quad-title">Execution & Operations</span>
+              <span class="quad-score">72</span>
+              <span class="quad-desc">Directional strength in Mars. Good execution metrics with steady growth.</span>
+            </div>
+            <div class="quadrant">
+              <span class="quad-title">Relational Leadership</span>
+              <span class="quad-score">58</span>
+              <span class="quad-desc">Moderate indicators. Relies on structured processes rather than direct persuasion.</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Precision mapping of professional suitability.</h3>
+            <p style="margin-bottom: 1.5rem;">Rather than simple labels like 'Engineer' or 'Writer', Astro-Engine plots your functional skills. By cross-referencing D10 divisional charts with primary houses of service (6th) and gains (11th), we calculate precise suitability scores.</p>
+            <p style="color: var(--color-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">★ Gold Highlight: Exalted Placement active in D10 divisional chart.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Relocation Atlas (White Section) -->
+    <section class="white-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Relocation Atlas</h2>
+          <p>Identify optimal geographic coordinates mapped to professional suitability, domestic stability, and long-term residency transits.</p>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">💼</div>
-          <h3>Career Suitability Matrix</h3>
-          <p>Visual profession scoring systems evaluating leadership, income potential, work-life balance, and risk across modern industries.</p>
+        <div class="editorial-card atlas-widget">
+          <div class="map-container">
+            <div class="map-outline-editorial"></div>
+            <div class="map-marker marker-in active" data-country="India" title="India"></div>
+            <div class="map-marker marker-ca" data-country="Canada" title="Canada"></div>
+            <div class="map-marker marker-de" data-country="Germany" title="Germany"></div>
+            <div class="map-marker marker-us" data-country="USA" title="USA"></div>
+            <div class="map-marker marker-au" data-country="Australia" title="Australia"></div>
+          </div>
+
+          <div style="padding-left: 2rem; border-left: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h4 id="loc-title" style="font-size: 1.4rem; margin-bottom: 0.75rem;">India</h4>
+              <p id="loc-desc" style="font-size: 0.9rem; margin-bottom: 1.5rem;">Strong 4th house alignment. India offers the highest baseline emotional and domestic security, with stable and predictable professional growth.</p>
+            </div>
+            <table class="report-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Professional Growth</td>
+                  <td id="loc-career" style="font-weight: 600; color: var(--accent-emerald);">75%</td>
+                </tr>
+                <tr>
+                  <td>Financial Yield</td>
+                  <td id="loc-money" style="font-weight: 600; color: var(--accent-emerald);">70%</td>
+                </tr>
+                <tr>
+                  <td>Relationship Harmony</td>
+                  <td id="loc-marriage" style="font-weight: 600; color: var(--accent-emerald);">85%</td>
+                </tr>
+                <tr>
+                  <td>Mental Stability</td>
+                  <td id="loc-peace" style="font-weight: 600; color: var(--accent-emerald);">90%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Classical Analysis (Gray Section) -->
+    <section class="gray-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Source-Cited Methodology</h2>
+          <p>Every calculation and timing boundary maps back to translations of classical Vedic literature.</p>
         </div>
 
-        <!-- Feature 4 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">🤝</div>
-          <h3>Multi-Context Compatibility</h3>
-          <p>Broad-spectrum relationship matching for business partners, co-founders, managers, spouses, and siblings using Mercury-Jupiter trines and Saturn-Mars stabilization.</p>
+        <div class="classical-grid">
+          <div class="citation-card">
+            <p class="citation-quote">"If the lord of the 10th house is placed in an angle or trine, the native achieves early professional recognition, backed by structured wisdom."</p>
+            <span class="citation-source">Brihat Parashara Hora Shastra, Ch. 24, Verse 8</span>
+          </div>
+          <div class="citation-card">
+            <p class="citation-quote">"Jupiter aspecting the Ascendant from a trine creates Hamsa Yoga, stabilizing emotional conflicts and driving long-term intellectual growth."</p>
+            <span class="citation-source">Phaladeepika, Ch. 6, Verse 15</span>
+          </div>
+          <div class="citation-card">
+            <p class="citation-quote">"A planet in exalted degrees in the Navamsa chart retains 100% of its native rasi strength even during challenged transits."</p>
+            <span class="citation-source">Saravali, Ch. 3, Verse 42</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: How It Works (White Section) -->
+    <section class="white-section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin: 0 auto 5rem auto;">
+          <h2>How It Works</h2>
+          <p>The structured flow of data translation from birth coordinates to interactive dashboard.</p>
         </div>
 
-        <!-- Feature 5 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Decision Engine</h3>
-          <p>Real-time planetary alignment scoring for specific queries like "Should I switch jobs?" or "Is relocation favorable this year?"</p>
+        <div class="process-flow">
+          <div class="process-step">
+            <span class="step-number">1</span>
+            <p class="step-title">Birth Details</p>
+            <p class="step-desc">Location coordinates, date, and exact birth time.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">2</span>
+            <p class="step-title">Classical Calculations</p>
+            <p class="step-desc">Plotting divisional charts, houses, and planetary degrees.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">3</span>
+            <p class="step-title">Rule Engine</p>
+            <p class="step-desc">Evaluating 1200+ classical formulas and exclusions.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">4</span>
+            <p class="step-title">Professional Report</p>
+            <p class="step-desc">Generating source-cited, transparent PDF reviews.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">5</span>
+            <p class="step-title">Decision Atlas</p>
+            <p class="step-desc">Unlocking dynamic timeline and relocation maps.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Feature 6 -->
-        <div class="glass-panel feature-card">
-          <div class="feature-icon">🔢</div>
-          <h3>Numerology Fallback</h3>
-          <p>For users without birth times: Pythagorean cycle calculators analyzing name and date numbers, highlighting repeating themes and core tensions.</p>
+    <!-- Section 6: Waitlist (Gray Section) -->
+    <section class="gray-section" id="join-waitlist">
+      <div class="container">
+        <div class="editorial-card waitlist-panel">
+          <h2>Reserve Free Access</h2>
+          <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem;">Join the waitlist to receive your comprehensive birth blueprint upon launch.</p>
+          
+          <form id="waitlist-form">
+            <div class="form-group">
+              <label for="user-name">Full Name</label>
+              <input type="text" id="user-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="user-email">Email Address</label>
+              <input type="email" id="user-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="has-birth-details">Do you know your exact birth time & location?</label>
+              <select id="has-birth-details">
+                <option value="yes">Yes, I have my exact birth details</option>
+                <option value="no">No (I prefer Numerology fallback)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Join the Waitlist</button>
+          </form>
+
+          <div id="waitlist-success" class="hidden success-box" style="margin-top: 1.5rem;">
+            ✨ You have successfully registered. We will notify you when your report is generated.
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer style="border-top: 1px solid var(--border-glass); padding: 3rem 0; margin-top: 6rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-    <p>&copy; 2026 Astro-Engine. Citing classical Vedic sources with absolute transparency. Coming soon.</p>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Astro-Engine. Citing classical Vedic sources with absolute transparency.</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#reports">Reports</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#research">Research</a>
+      </div>
+    </div>
   </footer>
 
   <!-- Firebase SDKs -->
