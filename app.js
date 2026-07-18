@@ -1,7 +1,7 @@
-// Astro-Engine VP of UX Interactivity Logic
+// Astro-Engine Apple Product-Style Parallax Interactivity Logic
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Generate Twinkling Star Background Particles
+  // 1. Generate 60 Twinkling Background Stars
   const bg = document.querySelector(".space-bg");
   if (bg) {
     for (let i = 0; i < 60; i++) {
@@ -17,26 +17,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 2. Mouse 3D Tilt Effect on Cards
-  const cards = document.querySelectorAll(".card-3d");
-  cards.forEach(card => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = (-y / rect.height) * 10;
-      const rotateY = (x / rect.width) * 10;
-      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
+  // 2. Apple-Style 3D Scroll Parallax Observer
+  const parallaxObserverOptions = {
+    root: null,
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.1
+  };
 
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0deg) rotateY(0deg)";
+  const parallaxObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      }
     });
+  }, parallaxObserverOptions);
+
+  document.querySelectorAll(".parallax-box").forEach(el => {
+    parallaxObserver.observe(el);
   });
 
-  // 3. Interactive World Map Pins & Stats
-  const mapPins = document.querySelectorAll(".pin-node");
-  const destTitle = document.getElementById("dest-title");
+  // 3. Interactive Destination Flight Path Map Nodes
+  const mapNodes = document.querySelectorAll(".map-node");
+  const destName = document.getElementById("dest-name");
   const valCareer = document.getElementById("val-career");
   const valWealth = document.getElementById("val-wealth");
   const valMarriage = document.getElementById("val-marriage");
@@ -50,12 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
     India: { career: "75%", wealth: "70%", marriage: "85%", peace: "90%" }
   };
 
-  mapPins.forEach(pin => {
-    pin.addEventListener("click", () => {
-      const city = pin.dataset.city;
+  mapNodes.forEach(node => {
+    node.addEventListener("click", () => {
+      const city = node.dataset.city;
       const data = locationData[city];
       if (data) {
-        destTitle.textContent = `Target: ${city}`;
+        destName.textContent = `Target: ${city}`;
         valCareer.textContent = data.career;
         valWealth.textContent = data.wealth;
         valMarriage.textContent = data.marriage;
@@ -64,32 +66,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. Interactive Line Graph Nodes
-  const graphPoints = document.querySelectorAll(".graph-point");
-  const gAge = document.getElementById("g-age");
-  const gDasha = document.getElementById("g-dasha");
-  const gStatus = document.getElementById("g-status");
-  const gDesc = document.getElementById("g-desc");
+  // 4. Interactive Life Line Graph Points
+  const pointNodes = document.querySelectorAll(".point-node");
+  const pointAge = document.getElementById("point-age");
+  const pointDasha = document.getElementById("point-dasha");
+  const pointStatus = document.getElementById("point-status");
+  const pointDesc = document.getElementById("point-desc");
 
   const timelineData = {
-    20: { dasha: "Venus-Rahu", status: "Transition", desc: "Foundational phase of learning and shifting identity.", color: "#F59E0B" },
-    25: { dasha: "Venus-Jupiter", status: "Growth Peak", desc: "First major career breakthrough under Jupiter aspect.", color: "#10B981" },
-    29: { dasha: "Sun-Sun", status: "Authority Shift", desc: "Significant restructuring of career status and 10th house activation.", color: "#3B82F6" },
-    35: { dasha: "Sun-Saturn", status: "Consolidation", desc: "Saturn test phase. Demands structured effort and patience.", color: "#F43F5E" },
-    45: { dasha: "Moon-Jupiter", status: "High Growth", desc: "Gajakesari Yoga peak activation. Excellent financial stability.", color: "#10B981" },
+    20: { dasha: "Venus-Rahu", status: "Transition Phase", desc: "Foundational period of academic learning and shifting identity.", color: "#F59E0B" },
+    25: { dasha: "Venus-Jupiter", status: "Growth Peak", desc: "First major career breakthrough under Jupiter's trine aspect.", color: "#10B981" },
+    29: { dasha: "Sun-Sun", status: "Authority Shift", desc: "Significant career status restructuring and 10th house activation.", color: "#3B82F6" },
+    35: { dasha: "Sun-Saturn", status: "Consolidation", desc: "Saturn test phase requiring structured effort and patience.", color: "#F43F5E" },
+    45: { dasha: "Moon-Jupiter", status: "High Growth", desc: "Gajakesari Yoga peak activation. Excellent financial stability & mentorship.", color: "#10B981" },
     60: { dasha: "Mars-Saturn", status: "Balanced Harvest", desc: "Spiritual fulfillment and harmonious life balance.", color: "#8B5CF6" }
   };
 
-  graphPoints.forEach(pt => {
+  pointNodes.forEach(pt => {
     pt.addEventListener("click", () => {
       const age = pt.dataset.age;
       const data = timelineData[age];
       if (data) {
-        gAge.textContent = `Age ${age}`;
-        gDasha.textContent = data.dasha;
-        gStatus.textContent = data.status;
-        gStatus.style.color = data.color;
-        gDesc.textContent = data.desc;
+        pointAge.textContent = `Age ${age}`;
+        pointDasha.textContent = data.dasha;
+        pointStatus.textContent = data.status;
+        pointStatus.style.color = data.color;
+        pointDesc.textContent = data.desc;
       }
     });
   });

@@ -1,25 +1,23 @@
-/* Astro-Engine Executive VP of UX Design System */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+/* Astro-Engine Apple Product-Style 3D Parallax Showcase */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=SF+Pro+Display:wght@500;600;700&display=swap');
 
 :root {
-  /* Slate Charcoal Palette */
-  --bg-main: #0B0F17;
-  --bg-card: #1E293B;
-  --bg-card-hover: #243347;
+  --bg-dark: #080B11;
+  --bg-surface: #111827;
+  --bg-surface-hover: #1E293B;
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(59, 130, 246, 0.4);
   
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
   
-  /* VP of UX Executive Accents */
-  --cobalt: #3B82F6;
+  --apple-blue: #0071E3;
   --mint: #10B981;
+  --cobalt: #3B82F6;
   --amber: #F59E0B;
   --rose: #F43F5E;
 
-  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", sans-serif;
 }
 
 * {
@@ -33,11 +31,11 @@ html {
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--bg-dark);
   color: var(--text-primary);
-  font-family: var(--font-sans);
+  font-family: var(--font-apple);
   overflow-x: hidden;
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -50,9 +48,9 @@ body {
   height: 100vh;
   z-index: -2;
   background: 
-    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 45%),
-    #0B0F17;
+    radial-gradient(circle at 50% 15%, rgba(0, 113, 227, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 65%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    #080B11;
 }
 
 .star {
@@ -65,26 +63,25 @@ body {
 
 @keyframes twinkle {
   0%, 100% { opacity: 0.15; transform: scale(0.8); }
-  50% { opacity: 0.8; transform: scale(1.2); }
+  50% { opacity: 0.8; transform: scale(1.3); }
 }
 
 /* Layout Container */
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  perspective: 1200px;
+  padding: 0 2rem;
 }
 
-/* Executive Header */
+/* Apple Translucent Sticky Header */
 header {
-  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 15, 23, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  padding: 1rem 0;
+  background: rgba(8, 11, 17, 0.75);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -99,13 +96,13 @@ header {
   color: #022C22;
   font-size: 1.05rem;
   font-weight: 700;
-  padding: 0.45rem 1.2rem;
+  padding: 0.45rem 1.25rem;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
-  border: 1px solid #FFFFFF;
+  box-shadow: 0 4px 25px rgba(16, 185, 129, 0.3);
+  border: 1.5px solid #FFFFFF;
 }
 
 .brand-badge span.accent {
@@ -118,87 +115,77 @@ header {
   text-transform: uppercase;
 }
 
-/* Hero Section */
+/* Apple Hero Section */
 .hero {
-  padding: 5.5rem 0 3.5rem 0;
+  padding: 8rem 0 6rem 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3.75rem;
-  line-height: 1.12;
+  font-size: 4.5rem;
+  line-height: 1.05;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
-  background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
   color: var(--text-secondary);
-  max-width: 660px;
-  margin: 0 auto 2.5rem auto;
+  max-width: 720px;
+  margin: 0 auto;
   font-weight: 400;
 }
 
-/* 3D Glass Cards */
-.card-3d {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  padding: 2.25rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, border-color 0.3s ease, background 0.3s ease;
+/* Apple Showcase Sections (No AI Slop Boxed Cards) */
+.showcase-section {
+  padding: 7rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.showcase-header {
+  text-align: center;
   margin-bottom: 3.5rem;
 }
 
-.card-3d:hover {
-  border-color: var(--border-active);
-  background: var(--bg-card-hover);
-}
-
-.card-title-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.75rem;
-  transform: translateZ(35px);
-}
-
-.card-title-bar h2 {
-  font-size: 1.5rem;
+.showcase-header h2 {
+  font-size: 2.75rem;
   font-weight: 700;
-  letter-spacing: -0.015em;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
 }
 
-.pill-badge {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background: rgba(59, 130, 246, 0.12);
-  color: var(--cobalt);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+.showcase-header p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
 }
 
-/* Relocation World Map & Flight Path Visualization */
-.world-map-wrapper {
+/* Apple 3D Scroll Parallax Box */
+.parallax-box {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.parallax-box.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Feature 1: Flight Path Atlas Showcase */
+.map-viewport {
   position: relative;
   width: 100%;
-  height: 380px;
-  background: #090D14;
+  height: 420px;
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.9) 0%, rgba(8, 11, 17, 0.95) 100%);
   border: 1px solid var(--border-subtle);
-  border-radius: 14px;
+  border-radius: 24px;
   overflow: hidden;
-  transform: translateZ(40px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
 .world-map-svg {
@@ -206,174 +193,187 @@ header {
   height: 100%;
 }
 
-.continent-path {
+.continent-shape {
   fill: #1E293B;
   stroke: #334155;
   stroke-width: 0.75;
   transition: fill 0.3s ease;
 }
 
-.continent-path:hover {
-  fill: #243347;
+.continent-shape:hover {
+  fill: #2B3B52;
 }
 
-/* Flight Path Arc Styling */
-.flight-path {
+.flight-arc-path {
   fill: none;
   stroke-dasharray: 6 4;
-  animation: strokeTravel 2.5s linear infinite;
-  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6));
+  animation: arcTravel 2.5s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 113, 227, 0.6));
 }
 
-@keyframes strokeTravel {
+@keyframes arcTravel {
   0% { stroke-dashoffset: 40; }
   100% { stroke-dashoffset: 0; }
 }
 
-.pin-node {
+.map-node {
   cursor: pointer;
   transition: transform 0.25s ease;
 }
 
-.pin-node:hover {
-  transform: scale(1.35);
+.map-node:hover {
+  transform: scale(1.4);
 }
 
-.map-stats-panel {
-  margin-top: 1.5rem;
-  background: rgba(15, 23, 42, 0.6);
+.dest-stats-bar {
+  margin-top: 2rem;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  padding: 1.25rem;
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: center;
-  transform: translateZ(30px);
 }
 
-.stat-item .val {
-  display: block;
-  font-size: 1.6rem;
+.dest-stats-bar .stat-val {
+  font-size: 1.8rem;
   font-weight: 800;
-  color: var(--cobalt);
+  color: var(--apple-blue);
+  display: block;
 }
 
-.stat-item .lbl {
-  font-size: 0.75rem;
+.dest-stats-bar .stat-lbl {
+  font-size: 0.8rem;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-/* Section 2: Life Line Graph */
-.graph-box {
-  width: 100%;
-  height: 240px;
-  transform: translateZ(40px);
+/* Feature 2: Life Line Trajectory Showcase */
+.line-graph-viewport {
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-.graph-path-line {
+.line-graph-svg {
+  width: 100%;
+  height: 220px;
+  overflow: visible;
+}
+
+.bezier-path {
   fill: none;
   stroke: var(--cobalt);
-  stroke-width: 3.5;
-  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+  stroke-width: 4;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
 }
 
-.graph-fill-area {
-  fill: url(#cobalt-area-fill);
+.bezier-area {
+  fill: url(#area-gradient-blue);
   opacity: 0.2;
 }
 
-.graph-point {
+.point-node {
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
-.graph-point:hover {
+.point-node:hover {
   transform: scale(1.4);
 }
 
-.graph-details-strip {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateZ(30px);
-}
-
-/* Section 3: 4-Quadrant Career Grid */
-.quadrant-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  transform: translateZ(40px);
-}
-
-.quad-card {
-  background: rgba(15, 23, 42, 0.6);
+.trajectory-info-strip {
+  margin-top: 1.75rem;
+  background: rgba(11, 15, 23, 0.6);
   border: 1px solid var(--border-subtle);
   border-radius: 14px;
-  padding: 1.5rem;
-  transition: all 0.25s ease;
-}
-
-.quad-card:hover {
-  background: rgba(30, 41, 59, 0.8);
-  transform: translateZ(12px);
-}
-
-.quad-card.q1 { border-left: 4px solid var(--mint); }
-.quad-card.q2 { border-left: 4px solid var(--cobalt); }
-.quad-card.q3 { border-left: 4px solid var(--amber); }
-.quad-card.q4 { border-left: 4px solid var(--rose); }
-
-.quad-head {
+  padding: 1.25rem 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.6rem;
 }
 
-.quad-tag {
-  font-size: 0.7rem;
+/* Feature 3: Career Alignment Compass Showcase */
+.career-compass-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.quadrant-block {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quadrant-block:hover {
+  background: rgba(30, 41, 59, 0.7);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.quadrant-block.q-emerald { border-left: 4px solid var(--mint); }
+.quadrant-block.q-cobalt { border-left: 4px solid var(--cobalt); }
+.quadrant-block.q-amber { border-left: 4px solid var(--amber); }
+.quadrant-block.q-rose { border-left: 4px solid var(--rose); }
+
+.quad-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.quad-badge {
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
 }
 
-.q1 .quad-tag { background: rgba(16, 185, 129, 0.15); color: var(--mint); }
-.q2 .quad-tag { background: rgba(59, 130, 246, 0.15); color: var(--cobalt); }
-.q3 .quad-tag { background: rgba(245, 158, 11, 0.15); color: var(--amber); }
-.q4 .quad-tag { background: rgba(244, 63, 94, 0.15); color: var(--rose); }
+.q-emerald .quad-badge { background: rgba(16, 185, 129, 0.15); color: var(--mint); }
+.q-cobalt .quad-badge { background: rgba(59, 130, 246, 0.15); color: var(--cobalt); }
+.q-amber .quad-badge { background: rgba(245, 158, 11, 0.15); color: var(--amber); }
+.q-rose .quad-badge { background: rgba(244, 63, 94, 0.15); color: var(--rose); }
 
-.quad-title {
-  font-size: 1rem;
+.quad-score-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.quad-role-title {
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
-.quad-text {
-  font-size: 0.85rem;
+.quad-role-desc {
+  font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 3rem 0;
+  padding: 4rem 0;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-top: 1px solid var(--border-subtle);
 }
 
 @media (max-width: 800px) {
-  .hero h1 { font-size: 2.6rem; }
-  .quadrant-container { grid-template-columns: 1fr; }
-  .map-stats-panel { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 3rem; }
+  .career-compass-grid { grid-template-columns: 1fr; }
+  .dest-stats-bar { grid-template-columns: repeat(2, 1fr); }
 }
