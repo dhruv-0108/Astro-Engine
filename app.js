@@ -1,7 +1,7 @@
-// Astro-Engine Apple Product-Style Parallax Interactivity Logic
+// Astro-Engine Full-Bleed 100% Width Interactivity Logic
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Generate 60 Twinkling Background Stars
+  // 1. Generate 60 Twinkling Star Background Particles
   const bg = document.querySelector(".space-bg");
   if (bg) {
     for (let i = 0; i < 60; i++) {
@@ -17,26 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 2. Apple-Style 3D Scroll Parallax Observer
-  const parallaxObserverOptions = {
+  // 2. Scroll Parallax Reveal Observer
+  const observerOptions = {
     root: null,
     rootMargin: "0px 0px -10% 0px",
     threshold: 0.1
   };
 
-  const parallaxObserver = new IntersectionObserver((entries, observer) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
       }
     });
-  }, parallaxObserverOptions);
+  }, observerOptions);
 
   document.querySelectorAll(".parallax-box").forEach(el => {
-    parallaxObserver.observe(el);
+    observer.observe(el);
   });
 
-  // 3. Interactive Destination Flight Path Map Nodes
+  // 3. Interactive Destination Nodes
   const mapNodes = document.querySelectorAll(".map-node");
   const destName = document.getElementById("dest-name");
   const valCareer = document.getElementById("val-career");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. Interactive Life Line Graph Points
+  // 4. Interactive Line Graph Nodes
   const pointNodes = document.querySelectorAll(".point-node");
   const pointAge = document.getElementById("point-age");
   const pointDasha = document.getElementById("point-dasha");
