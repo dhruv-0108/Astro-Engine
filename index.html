@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Astro-Engine — Interactive Celestial Intelligence</title>
-  <meta name="description" content="Explore interactive life potential line graphs, 4-quadrant career compasses, and flight-path relocation maps built on classical Vedic rules.">
+  <title>Astro-Engine — Celestial Intelligence & Relocation Atlas</title>
+  <meta name="description" content="Explore realistic SVG world map flight arcs, interactive life line graphs, and 4-quadrant career alignment matrices built on classical Vedic rules.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Animated Space Background -->
+  <!-- Background Space Atmosphere -->
   <div class="space-bg"></div>
 
   <!-- Header with Green and White Title Logo -->
   <header>
     <div class="container header-inner">
-      <div class="brand-logo">
-        🪐 Astro-Engine <span class="brand-badge">V1 BETA</span>
+      <div class="brand-badge">
+        🪐 Astro-Engine <span class="accent">V1 BETA</span>
       </div>
     </div>
   </header>
@@ -25,199 +25,218 @@
     <!-- Hero Section -->
     <section class="container hero">
       <h1>Celestial Intelligence.<br>Reimagined.</h1>
-      <p>An interactive decision-support platform transforming classical Vedic astrology into dynamic life line graphs, 4-quadrant career compasses, and geographical flight-path maps.</p>
+      <p>An executive decision-support platform transforming classical Vedic astrology into realistic geographical flight-path maps, 4-quadrant career matrices, and dynamic life potential graphs.</p>
     </section>
 
     <div class="container">
-      <!-- Feature 1: Interactive Life Line Graph -->
-      <div class="card-3d" id="timeline-card">
+
+      <!-- Feature 1: Detailed SVG World Map & Flight Path Arcs -->
+      <div class="card-3d" id="relocation-card">
         <div class="card-title-bar">
-          <h2>📈 Life Potential Timeline</h2>
-          <span class="tag-badge">Vimshottari Dasha</span>
+          <h2>✈️ Relocation Flight Path Atlas</h2>
+          <span class="pill-badge">Flight Trajectory</span>
         </div>
 
-        <div class="graph-container">
-          <svg class="line-svg" viewBox="0 0 800 200">
+        <div class="world-map-wrapper">
+          <svg class="world-map-svg" viewBox="0 0 1000 500">
             <defs>
-              <linearGradient id="emerald-cyan-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#10B981" />
-                <stop offset="50%" stop-color="#06B6D4" />
-                <stop offset="100%" stop-color="#8B5CF6" />
+              <linearGradient id="arc-gradient-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10B981" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#10B981" stop-opacity="1" />
               </linearGradient>
-              <linearGradient id="graph-area-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#10B981" />
-                <stop offset="100%" stop-color="transparent" />
+              <linearGradient id="arc-gradient-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#3B82F6" stop-opacity="1" />
               </linearGradient>
             </defs>
 
-            <!-- Area Fill -->
-            <path class="graph-fill" d="M 50 120 Q 180 30 300 90 T 550 40 T 750 100 L 750 190 L 50 190 Z" />
-
-            <!-- Curve Line -->
-            <path class="graph-path" d="M 50 120 Q 180 30 300 90 T 550 40 T 750 100" />
-
-            <!-- Glowing Nodes -->
-            <g class="graph-node" data-age="20" transform="translate(50, 120)">
-              <circle r="8" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2" />
-              <text y="25" x="-10" fill="#94A3B8" font-size="12">Age 20</text>
+            <!-- Detailed Vector Continent Outline Paths -->
+            <g class="continents">
+              <!-- North America -->
+              <path class="continent-path" d="M120,80 L220,60 L320,70 L340,110 L310,160 L240,180 L200,240 L160,220 L130,170 L110,120 Z" />
+              <!-- South America -->
+              <path class="continent-path" d="M260,260 L330,260 L360,320 L320,420 L270,440 L250,360 Z" />
+              <!-- Europe -->
+              <path class="continent-path" d="M470,80 L560,70 L590,120 L530,160 L460,130 Z" />
+              <!-- Africa -->
+              <path class="continent-path" d="M460,170 L560,170 L600,240 L560,340 L500,350 L450,260 Z" />
+              <!-- Asia -->
+              <path class="continent-path" d="M590,70 L850,50 L920,130 L850,220 L720,240 L600,160 Z" />
+              <!-- Australia -->
+              <path class="continent-path" d="M800,320 L910,310 L930,380 L840,410 L790,360 Z" />
             </g>
-            <g class="graph-node" data-age="25" transform="translate(180, 45)">
-              <circle r="8" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
-              <text y="-15" x="-10" fill="#94A3B8" font-size="12">Age 25</text>
-            </g>
-            <g class="graph-node" data-age="29" transform="translate(300, 90)">
-              <circle r="8" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2" />
-              <text y="25" x="-10" fill="#94A3B8" font-size="12">Age 29</text>
-            </g>
-            <g class="graph-node" data-age="35" transform="translate(420, 130)">
-              <circle r="8" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" />
-              <text y="25" x="-10" fill="#94A3B8" font-size="12">Age 35</text>
-            </g>
-            <g class="graph-node" data-age="45" transform="translate(550, 40)">
-              <circle r="8" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
-              <text y="-15" x="-10" fill="#94A3B8" font-size="12">Age 45</text>
-            </g>
-            <g class="graph-node" data-age="60" transform="translate(750, 100)">
-              <circle r="8" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2" />
-              <text y="25" x="-10" fill="#94A3B8" font-size="12">Age 60</text>
-            </g>
-          </svg>
-        </div>
 
-        <div class="node-info-box">
-          <div>
-            <strong id="graph-age" style="font-size: 1.2rem; color: #FFFFFF;">Age 25 (Peak)</strong>
-            <p id="graph-desc" style="font-size: 0.9rem; color: #94A3B8; margin-top: 0.2rem;">First major creative and career breakthrough under Jupiter aspect.</p>
-          </div>
-          <div style="text-align: right;">
-            <span style="font-size: 0.75rem; text-transform: uppercase; color: #64748B; display: block;">Active Period</span>
-            <span id="graph-dasha" style="font-weight: 700; color: #10B981;">Venus-Jupiter</span>
-            <span id="graph-status" style="font-size: 0.8rem; display: block; color: #10B981; font-weight: 600;">Growth Peak</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 2: 4-Quadrant Career Compass Grid -->
-      <div class="card-3d" id="career-card">
-        <div class="card-title-bar">
-          <h2>🎯 Career Alignment Matrix</h2>
-          <span class="tag-badge">4-Quadrant Grid</span>
-        </div>
-
-        <div class="quadrant-grid">
-          <!-- Quadrant 1 -->
-          <div class="quadrant-box most">
-            <div class="quad-header">
-              <span class="quad-tag">Most Favorable</span>
-              <span class="quad-score" style="color: #10B981;">94%</span>
-            </div>
-            <p class="quad-roles">AI Strategy & High Tech</p>
-            <p class="quad-desc">Strong 9th & 10th lord connection with Mercury exaltation. Ideal for technical creation.</p>
-          </div>
-
-          <!-- Quadrant 2 -->
-          <div class="quadrant-box favorable">
-            <div class="quad-header">
-              <span class="quad-tag">Favorable / Good</span>
-              <span class="quad-score" style="color: #06B6D4;">84%</span>
-            </div>
-            <div class="quad-roles">Finance & Consulting</div>
-            <p class="quad-desc">11th house of gains activated. High suitability for financial analysis and advising.</p>
-          </div>
-
-          <!-- Quadrant 3 -->
-          <div class="quadrant-box moderate">
-            <div class="quad-header">
-              <span class="quad-tag">Moderate</span>
-              <span class="quad-score" style="color: #F59E0B;">68%</span>
-            </div>
-            <p class="quad-roles">Sales & Marketing</p>
-            <p class="quad-desc">Mars directional strength supports steady operational roles with steady performance.</p>
-          </div>
-
-          <!-- Quadrant 4 -->
-          <div class="quadrant-box least">
-            <div class="quad-header">
-              <span class="quad-tag">Least Favorable</span>
-              <span class="quad-score" style="color: #EF4444;">45%</span>
-            </div>
-            <p class="quad-roles">Military & Politics</p>
-            <p class="quad-desc">Challenged 6th lord aspect. Avoid high-conflict political or defense sectors.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 3: Relocation Flight Arc Map -->
-      <div class="card-3d" id="relocation-card">
-        <div class="card-title-bar">
-          <h2>✈️ Relocation Flight Arc Map</h2>
-          <span class="tag-badge">Flight Trajectory</span>
-        </div>
-
-        <div class="map-graphic-box">
-          <svg class="world-svg-bg" viewBox="0 0 1000 400">
-            <!-- Simplified Continent Coastline Paths -->
-            <path d="M150,150 L200,120 L250,140 L300,100 L350,110 L400,90 L450,100 L500,130 L550,110 L600,140 L650,160 L700,200 L750,180 L800,220 L850,260 Z" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+            <!-- Animated Curved Flight Path Arcs originating from Birthplace (India: 710, 210) -->
+            <!-- Flight Arc to Germany (530, 120) -->
+            <path class="flight-path" d="M 710 210 Q 620 90 530 120" stroke="url(#arc-gradient-emerald)" stroke-width="3" />
             
-            <!-- Flight Arcs from Birthplace (India: 680, 230) -->
-            <!-- Arc to Germany (510, 150) -->
-            <path class="flight-arc" d="M 680 230 Q 595 130 510 150" stroke="#10B981" stroke-width="2.5" />
-            <!-- Arc to USA (210, 170) -->
-            <path class="flight-arc" d="M 680 230 Q 445 60 210 170" stroke="#06B6D4" stroke-width="2.5" />
-            <!-- Arc to Canada (240, 130) -->
-            <path class="flight-arc" d="M 680 230 Q 460 50 240 130" stroke="#06B6D4" stroke-width="2.5" />
-            <!-- Arc to Australia (850, 310) -->
-            <path class="flight-arc" d="M 680 230 Q 765 240 850 310" stroke="#F59E0B" stroke-width="2.5" />
+            <!-- Flight Arc to USA (240, 140) -->
+            <path class="flight-path" d="M 710 210 Q 470 20 240 140" stroke="url(#arc-gradient-blue)" stroke-width="3" />
+            
+            <!-- Flight Arc to Canada (220, 100) -->
+            <path class="flight-path" d="M 710 210 Q 460 10 220 100" stroke="url(#arc-gradient-blue)" stroke-width="3" />
+            
+            <!-- Flight Arc to Australia (860, 360) -->
+            <path class="flight-path" d="M 710 210 Q 785 270 860 360" stroke="#F59E0B" stroke-width="3" />
 
             <!-- Birthplace Marker (India) -->
-            <g class="city-pin" data-city="India" transform="translate(680, 230)">
-              <circle r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
-              <text y="20" x="-25" fill="#10B981" font-size="12" font-weight="bold">Birthplace (India)</text>
+            <g class="pin-node" data-city="India" transform="translate(710, 210)">
+              <circle r="8" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5" />
+              <text y="24" x="-35" fill="#10B981" font-size="13" font-weight="bold">Birthplace (India)</text>
             </g>
 
             <!-- Destination Pins -->
-            <g class="city-pin" data-city="Germany" transform="translate(510, 150)">
+            <g class="pin-node" data-city="Germany" transform="translate(530, 120)">
               <circle r="6" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
-              <text y="-10" x="-25" fill="#FFFFFF" font-size="11">Germany (92%)</text>
+              <text y="-12" x="-30" fill="#F8FAFC" font-size="12" font-weight="600">Germany (92%)</text>
             </g>
 
-            <g class="city-pin" data-city="USA" transform="translate(210, 170)">
-              <circle r="6" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2" />
-              <text y="-10" x="-15" fill="#FFFFFF" font-size="11">USA (89%)</text>
+            <g class="pin-node" data-city="USA" transform="translate(240, 140)">
+              <circle r="6" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2" />
+              <text y="-12" x="-20" fill="#F8FAFC" font-size="12" font-weight="600">USA (89%)</text>
             </g>
 
-            <g class="city-pin" data-city="Canada" transform="translate(240, 130)">
-              <circle r="6" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2" />
-              <text y="-10" x="-20" fill="#FFFFFF" font-size="11">Canada (82%)</text>
+            <g class="pin-node" data-city="Canada" transform="translate(220, 100)">
+              <circle r="6" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2" />
+              <text y="-12" x="-25" fill="#F8FAFC" font-size="12" font-weight="600">Canada (82%)</text>
             </g>
 
-            <g class="city-pin" data-city="Australia" transform="translate(850, 310)">
+            <g class="pin-node" data-city="Australia" transform="translate(860, 360)">
               <circle r="6" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2" />
-              <text y="20" x="-25" fill="#FFFFFF" font-size="11">Australia (78%)</text>
+              <text y="22" x="-30" fill="#F8FAFC" font-size="12" font-weight="600">Australia (78%)</text>
             </g>
           </svg>
         </div>
 
-        <div class="relocation-detail-box">
+        <div class="map-stats-panel">
           <div class="stat-item">
-            <span class="lbl" id="city-title">Destination: Germany</span>
-            <span class="val" id="stat-career">92%</span>
+            <span class="lbl" id="dest-title">Target: Germany</span>
+            <span class="val" id="val-career" style="color: #10B981;">92%</span>
             <span class="lbl">Career</span>
           </div>
           <div class="stat-item">
             <span class="lbl">Wealth Potential</span>
-            <span class="val" id="stat-wealth">84%</span>
+            <span class="val" id="val-wealth" style="color: #3B82F6;">84%</span>
             <span class="lbl">Money</span>
           </div>
           <div class="stat-item">
             <span class="lbl">Domestic Security</span>
-            <span class="val" id="stat-marriage">73%</span>
+            <span class="val" id="val-marriage">73%</span>
             <span class="lbl">Marriage</span>
           </div>
           <div class="stat-item">
-            <span class="lbl">Mental Stability</span>
-            <span class="val" id="stat-peace">81%</span>
+            <span class="lbl">Mental Peace</span>
+            <span class="val" id="val-peace">81%</span>
             <span class="lbl">Peace</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Interactive Life Potential Line Graph -->
+      <div class="card-3d" id="timeline-card">
+        <div class="card-title-bar">
+          <h2>📈 Life Potential Trajectory Graph</h2>
+          <span class="pill-badge">Vimshottari Dasha</span>
+        </div>
+
+        <div class="graph-box">
+          <svg viewBox="0 0 800 200" style="width:100%; height:100%; overflow:visible;">
+            <defs>
+              <linearGradient id="cobalt-area-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#3B82F6" />
+                <stop offset="100%" stop-color="transparent" />
+              </linearGradient>
+            </defs>
+
+            <!-- Line fill area -->
+            <path class="graph-fill-area" d="M 50 120 Q 180 30 300 90 T 550 40 T 750 100 L 750 190 L 50 190 Z" />
+
+            <!-- Smooth bezier path -->
+            <path class="graph-path-line" d="M 50 120 Q 180 30 300 90 T 550 40 T 750 100" />
+
+            <!-- Interactive node circles -->
+            <g class="graph-point" data-age="20" transform="translate(50, 120)">
+              <circle r="7" fill="#F59E0B" stroke="#FFFFFF" stroke-width="2" />
+              <text y="24" x="-12" fill="#94A3B8" font-size="11">Age 20</text>
+            </g>
+            <g class="graph-point" data-age="25" transform="translate(180, 45)">
+              <circle r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
+              <text y="-14" x="-12" fill="#94A3B8" font-size="11">Age 25</text>
+            </g>
+            <g class="graph-point" data-age="29" transform="translate(300, 90)">
+              <circle r="7" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2" />
+              <text y="24" x="-12" fill="#94A3B8" font-size="11">Age 29</text>
+            </g>
+            <g class="graph-point" data-age="35" transform="translate(420, 130)">
+              <circle r="7" fill="#F43F5E" stroke="#FFFFFF" stroke-width="2" />
+              <text y="24" x="-12" fill="#94A3B8" font-size="11">Age 35</text>
+            </g>
+            <g class="graph-point" data-age="45" transform="translate(550, 40)">
+              <circle r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2" />
+              <text y="-14" x="-12" fill="#94A3B8" font-size="11">Age 45</text>
+            </g>
+            <g class="graph-point" data-age="60" transform="translate(750, 100)">
+              <circle r="7" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2" />
+              <text y="24" x="-12" fill="#94A3B8" font-size="11">Age 60</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="graph-details-strip">
+          <div>
+            <strong id="g-age" style="font-size: 1.15rem; color: #F8FAFC;">Age 25 (Peak)</strong>
+            <p id="g-desc" style="font-size: 0.85rem; color: #94A3B8; margin-top: 0.2rem;">First major creative and career breakthrough under Jupiter aspect.</p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.7rem; text-transform: uppercase; color: #64748B; display: block;">Period</span>
+            <span id="g-dasha" style="font-weight: 700; color: #10B981;">Venus-Jupiter</span>
+            <span id="g-status" style="font-size: 0.8rem; display: block; color: #10B981; font-weight: 600;">Growth Peak</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3: 4-Quadrant Career Matrix -->
+      <div class="card-3d" id="career-card">
+        <div class="card-title-bar">
+          <h2>🎯 Career Alignment Compass</h2>
+          <span class="pill-badge">4-Quadrant Grid</span>
+        </div>
+
+        <div class="quadrant-container">
+          <div class="quad-card q1">
+            <div class="quad-head">
+              <span class="quad-tag">Most Favorable</span>
+              <span style="font-family: var(--font-sans); font-weight: 800; font-size: 1.5rem; color: #10B981;">94%</span>
+            </div>
+            <p class="quad-title">AI Strategy & High Tech</p>
+            <p class="quad-text">Strong 9th & 10th lord connection with Mercury exaltation in 10th house.</p>
+          </div>
+
+          <div class="quad-card q2">
+            <div class="quad-head">
+              <span class="quad-tag">Favorable / Good</span>
+              <span style="font-family: var(--font-sans); font-weight: 800; font-size: 1.5rem; color: #3B82F6;">84%</span>
+            </div>
+            <p class="quad-title">Finance & Consulting</p>
+            <p class="quad-text">11th house of gains active. High suitability for financial architecture and advising.</p>
+          </div>
+
+          <div class="quad-card q3">
+            <div class="quad-head">
+              <span class="quad-tag">Moderate</span>
+              <span style="font-family: var(--font-sans); font-weight: 800; font-size: 1.5rem; color: #F59E0B;">68%</span>
+            </div>
+            <p class="quad-title">Sales & Operations</p>
+            <p class="quad-text">Mars directional strength supports operational roles with steady execution.</p>
+          </div>
+
+          <div class="quad-card q4">
+            <div class="quad-head">
+              <span class="quad-tag">Least Favorable</span>
+              <span style="font-family: var(--font-sans); font-weight: 800; font-size: 1.5rem; color: #F43F5E;">45%</span>
+            </div>
+            <p class="quad-title">Military & Politics</p>
+            <p class="quad-text">Challenged 6th lord aspect. Avoid high-conflict political or defense sectors.</p>
           </div>
         </div>
       </div>
@@ -226,7 +245,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Astro-Engine. All rights reserved. Interactive decision tools built on classical rules.</p>
+      <p>&copy; 2026 Astro-Engine. All rights reserved. Decision-support tools built on classical rules.</p>
     </div>
   </footer>
 
