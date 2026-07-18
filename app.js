@@ -1,4 +1,4 @@
-// Astro-Engine Apple-Style Landing Page Interactivity
+// Astro-Engine Simple Space Coming Soon Interactivity
 
 // Firebase Configuration
 const firebaseConfig = {
@@ -19,27 +19,23 @@ if (typeof firebase !== 'undefined') {
 document.addEventListener("DOMContentLoaded", () => {
   const db = (typeof firebase !== 'undefined') ? firebase.firestore() : null;
 
-  // 1. Apple-Style Scroll Reveal Observer
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.15
-  };
+  // Generate 70 Animated Stars
+  const bg = document.querySelector(".space-bg");
+  if (bg) {
+    for (let i = 0; i < 70; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.width = Math.random() * 2.5 + 1 + "px";
+      star.style.height = star.style.width;
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.setProperty("--duration", Math.random() * 4 + 2 + "s");
+      star.style.setProperty("--delay", Math.random() * 3 + "s");
+      bg.appendChild(star);
+    }
+  }
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-  });
-
-  // 2. Waitlist Form Handler
+  // Handle Waitlist Form Submission
   const waitlistForm = document.getElementById("waitlist-form");
   const successBox = document.getElementById("waitlist-success");
 
