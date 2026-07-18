@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro-Engine — Decode Your Celestial Blueprint (Coming Soon)</title>
+  <meta name="description" content="Astro-Engine is coming soon. Enter your details to get a free, detailed PDF analysis of your life condition and planetary alignments upon launch.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Space Background Overlay -->
+  <div class="space-bg"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        🪐 Astro-Engine <span class="badge">COMING SOON</span>
+      </div>
+      <a href="#join-waitlist" class="btn btn-primary">Join Waitlist</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Decode Your <span class="gradient">Celestial Blueprint</span></h1>
+        <p class="subtitle">A next-generation astrological decision-support system. Get detailed PDF reports citing classical texts comprehensively and transparently.</p>
+        
+        <div class="launch-badge">🚀 Launching soon. Get your detailed analysis report for free.</div>
+      </div>
+
+      <!-- Waitlist Form (Glassmorphic) -->
+      <div class="glass-panel" id="join-waitlist">
+        <h2>Reserve Free Access</h2>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Enter your details to be the first to receive your personalized PDF report upon launch.</p>
+        <form id="waitlist-form">
+          <div class="form-group">
+            <label for="user-name">Full Name</label>
+            <input type="text" id="user-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email Address</label>
+            <input type="email" id="user-email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="has-birth-details">Do you know your exact birth time & location?</label>
+            <select id="has-birth-details">
+              <option value="yes">Yes, I have my exact birth details</option>
+              <option value="no">No (I prefer Numerology fallback)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Join the Waitlist</button>
+        </form>
+        <div id="waitlist-success" class="hidden success-box">
+          ✨ You've successfully joined the waitlist! We will notify you as soon as your report is ready.
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Upcoming Features Showcase -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <h2>What We're Building</h2>
+        <p>Astro-Engine replaces static, black-box predictions with interactive, source-cited expert engines.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Life Potential Timeline</h3>
+          <p>An interactive life timeline mapping growth, stable, and transition phases using Vimshottari and Yogini dashas without false certainty.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Relocation Suitability Map</h3>
+          <p>A colored global map displaying career, money, marriage, and peace scores for any country based on 9th/12th house transits and D4 alignments.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">💼</div>
+          <h3>Career Suitability Matrix</h3>
+          <p>Visual profession scoring systems evaluating leadership, income potential, work-life balance, and risk across modern industries.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Multi-Context Compatibility</h3>
+          <p>Broad-spectrum relationship matching for business partners, co-founders, managers, spouses, and siblings using Mercury-Jupiter trines and Saturn-Mars stabilization.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Decision Engine</h3>
+          <p>Real-time planetary alignment scoring for specific queries like "Should I switch jobs?" or "Is relocation favorable this year?"</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="glass-panel feature-card">
+          <div class="feature-icon">🔢</div>
+          <h3>Numerology Fallback</h3>
+          <p>For users without birth times: Pythagorean cycle calculators analyzing name and date numbers, highlighting repeating themes and core tensions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 1px solid var(--border-glass); padding: 3rem 0; margin-top: 6rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+    <p>&copy; 2026 Astro-Engine. Citing classical Vedic sources with absolute transparency. Coming soon.</p>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
