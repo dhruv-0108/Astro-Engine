@@ -1,5 +1,5 @@
-/* Astro-Engine 100% Full-Bleed Edge-To-Edge Layout (No Cards) */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=SF+Pro+Display:wght@500;600;700&display=swap');
+/* Astro-Engine Full-Bleed Edge-To-Edge Layout */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg-dark: #050510;
@@ -12,7 +12,8 @@
   --amber: #F59E0B;
   --rose: #F43F5E;
 
-  --font-apple: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", sans-serif;
+  --font-serif: 'Playfair Display', "Times New Roman", Times, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -28,7 +29,7 @@ html {
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
-  font-family: var(--font-apple);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -68,16 +69,16 @@ body {
   padding: 0 4rem;
 }
 
-/* Apple-Style Sticky Header with Green/White Coming Soon Badge */
+/* Header with Plain Text (NO CARD / NO BADGE / NO BOX BACKGROUND) */
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1.25rem 0;
-  background: rgba(5, 5, 16, 0.75);
+  padding: 1.5rem 0;
+  background: rgba(5, 5, 16, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .header-inner {
@@ -86,28 +87,17 @@ header {
   align-items: center;
 }
 
-.brand-badge {
-  background: var(--mint);
-  color: #022C22;
-  font-size: 1.1rem;
-  font-weight: 800;
-  padding: 0.5rem 1.5rem;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 4px 25px rgba(16, 185, 129, 0.4);
-  border: 2px solid #FFFFFF;
+.brand-text {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
 }
 
-.brand-badge span.accent {
-  background: #FFFFFF;
-  color: #022C22;
-  font-size: 0.75rem;
+.brand-text .green-highlight {
+  color: var(--mint);
   font-weight: 800;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  text-transform: uppercase;
 }
 
 /* Hero Section */
@@ -117,10 +107,11 @@ header {
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-family: var(--font-serif);
+  font-size: 4.75rem;
   line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: -0.035em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
   background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
   -webkit-background-clip: text;
@@ -128,6 +119,7 @@ header {
 }
 
 .hero p {
+  font-family: var(--font-sans);
   font-size: 1.35rem;
   line-height: 1.45;
   color: var(--text-secondary);
@@ -135,7 +127,7 @@ header {
   margin: 0 auto;
 }
 
-/* 100% Full-Bleed Showcase Sections (NO CARDS) */
+/* 100% Full-Bleed Showcase Sections */
 .showcase-section {
   padding: 8rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -147,18 +139,20 @@ header {
 }
 
 .showcase-header h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 0.75rem;
 }
 
 .showcase-header p {
+  font-family: var(--font-sans);
   font-size: 1.2rem;
   color: var(--text-secondary);
 }
 
-/* Apple Scroll Parallax Reveal */
+/* Scroll Parallax Reveal */
 .parallax-box {
   opacity: 0;
   transform: translateY(60px) scale(0.96);
@@ -171,7 +165,7 @@ header {
   transform: translateY(0) scale(1);
 }
 
-/* 100% Width World Map Viewport (NO BOX CARD) */
+/* 100% Width World Map Viewport */
 .map-viewport-full {
   width: 100%;
   height: 520px;
@@ -224,6 +218,7 @@ header {
 }
 
 .dest-stats-full .stat-val {
+  font-family: var(--font-sans);
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--mint);
@@ -231,13 +226,14 @@ header {
 }
 
 .dest-stats-full .stat-lbl {
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-/* 100% Width Line Graph Viewport (NO BOX CARD) */
+/* 100% Width Line Graph Viewport */
 .line-graph-full {
   width: 100%;
   height: 280px;
@@ -276,9 +272,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  font-family: var(--font-sans);
 }
 
-/* 100% Width Career Grid (NO BOX CARDS) */
+/* 100% Width Career Grid */
 .career-grid-full {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -287,7 +284,7 @@ header {
 }
 
 .quadrant-flat {
-  padding: 2rem;
+  padding: 2rem 0;
   border-top: 3px solid transparent;
   transition: all 0.3s ease;
 }
@@ -298,18 +295,21 @@ header {
 .quadrant-flat.q-rose { border-top-color: var(--rose); }
 
 .quad-score-text {
+  font-family: var(--font-sans);
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .quad-role-title {
-  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
 
 .quad-role-desc {
+  font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--text-secondary);
 }
@@ -320,6 +320,7 @@ footer {
   padding: 4rem 0;
   color: var(--text-muted);
   font-size: 0.9rem;
+  font-family: var(--font-sans);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
