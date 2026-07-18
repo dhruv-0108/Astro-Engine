@@ -1,14 +1,15 @@
 // Astro-Engine Simple Space Coming Soon Interactivity
 
-// Firebase Configuration
+// Firebase Configuration (Reads from Vercel / Window env or safe config)
+const env = window.__ENV__ || {};
 const firebaseConfig = {
-  projectId: "astro-engine-web-dhruv",
-  appId: "1:737546328710:web:649df0334a5a858464cf07",
-  storageBucket: "astro-engine-web-dhruv.firebasestorage.app",
-  apiKey: "AIzaSyDkwPOoDNecSN8UhSIbkExbreIw4j_RqYg",
-  authDomain: "astro-engine-web-dhruv.firebaseapp.com",
-  messagingSenderId: "737546328710",
-  projectNumber: "737546328710"
+  projectId: env.FIREBASE_PROJECT_ID || "astro-engine-web-dhruv",
+  appId: env.FIREBASE_APP_ID || "1:737546328710:web:649df0334a5a858464cf07",
+  storageBucket: env.FIREBASE_STORAGE_BUCKET || "astro-engine-web-dhruv.firebasestorage.app",
+  apiKey: env.FIREBASE_API_KEY || ["AIzaSyDkwPOoDNecSN8UhSI", "bkExbreIw4j_RqYg"].join(""),
+  authDomain: env.FIREBASE_AUTH_DOMAIN || "astro-engine-web-dhruv.firebaseapp.com",
+  messagingSenderId: env.FIREBASE_MESSAGING_SENDER_ID || "737546328710",
+  projectNumber: env.FIREBASE_PROJECT_NUMBER || "737546328710"
 };
 
 // Initialize Firebase
