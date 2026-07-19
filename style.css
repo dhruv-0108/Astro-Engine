@@ -314,6 +314,56 @@ header {
   color: var(--text-secondary);
 }
 
+/* Showcase 4: Family & Generational Dynamics Layout */
+.family-grid-full {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
+}
+
+.family-pillar {
+  padding: 2.5rem 0;
+  border-top: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.family-pillar.f-mint { border-top-color: var(--mint); }
+.family-pillar.f-cobalt { border-top-color: var(--cobalt); }
+
+.family-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.family-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.family-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mint);
+  margin-bottom: 1rem;
+}
+
+.f-cobalt .family-tagline {
+  color: var(--cobalt);
+}
+
+.family-desc {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -328,5 +378,6 @@ footer {
   .hero h1 { font-size: 3rem; }
   .full-width { padding: 0 1.5rem; }
   .career-grid-full { grid-template-columns: repeat(2, 1fr); }
+  .family-grid-full { grid-template-columns: 1fr; }
   .dest-stats-full { grid-template-columns: repeat(2, 1fr); }
 }
