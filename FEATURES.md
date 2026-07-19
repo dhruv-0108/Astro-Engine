@@ -1,4 +1,4 @@
-# Astro-Engine — Product Features & Complete Technical Specification
+# Astro-Engine: Product Features & Complete Technical Specification
 
 This document serves as the master feature list and architectural specification for **Astro-Engine**. It captures all core product features, engine subsystems, classical rules, numerology algorithms, and interactive tools detailed in `Knowledge.md`.
 
@@ -10,7 +10,7 @@ This document serves as the master feature list and architectural specification 
 - **Core Philosophy**: Rooted in ancient Vedic tradition (*Dharma*), authentic sacred wisdom (*Vidya*) was created to enlighten and guide humanity, never to be monetized, paywalled, or commercialized.
 - **Marketing Positioning**:
   - **Tagline**: *"Sacred Wisdom. Open to All."*
-  - **Positioning**: Elevated executive presentation—framed as a public gift and uncompromised decision engine rather than a cheap or freemium tool.
+  - **Positioning**: Elevated executive presentation framed as a public gift and uncompromised decision engine rather than a cheap or freemium tool.
   - **Promises**: 100% free lifetime access to all reports, zero hidden fees, zero paywalled features, and complete open transparency of classical source texts.
 
 ### 👨‍👩‍👧‍👦 Family & Generational Dynamics (Child & Parent Analysis)
@@ -67,7 +67,7 @@ This document serves as the master feature list and architectural specification 
 
 ### ⚡ 5. Automated Decision Engine
 - **Overview**: Evaluates specific real-world questions (e.g., *"Should I switch jobs?"*, *"Should I relocate now?"*).
-- **Functionality**: Computes percentage suitability by analyzing active Dasha, current transits, D10/D4 strength, and classical rules—returning actionable percentage guidance with source citations.
+- **Functionality**: Computes percentage suitability by analyzing active Dasha, current transits, D10/D4 strength, and classical rules, returning actionable percentage guidance with source citations.
 
 ### 📊 6. Interactive Life Dashboard
 - **Overview**: Visual progress bars and domain scores for **Career**, **Wealth**, **Marriage**, **Health**, and **Spirituality**.
@@ -85,12 +85,12 @@ This document serves as the master feature list and architectural specification 
 ## 🔮 Vedic Astrology Engine (Classical Corpus & Rules)
 
 ### Primary Classical Texts (Layer 1)
-- **Brihat Parashara Hora Shastra (BPHS)** — Foundational Parashari rules.
-- **Brihat Jataka** & **Brihat Samhita** (Varahamihira) — Core natal principles.
-- **Phaladeepika** (Mantreswara) — Planetary results & Dasha effects.
-- **Saravali** (Kalyana Varma) — Combinations & Yoga results.
-- **Jataka Parijata** (Vaidyanatha Dikshita) — Advanced Yoga rules.
-- **Uttara Kalamrita** (Kalidasa) — Retrograde rules & house significations.
+- **Brihat Parashara Hora Shastra (BPHS)**: Foundational Parashari rules.
+- **Brihat Jataka** & **Brihat Samhita** (Varahamihira): Core natal principles.
+- **Phaladeepika** (Mantreswara): Planetary results & Dasha effects.
+- **Saravali** (Kalyana Varma): Combinations & Yoga results.
+- **Jataka Parijata** (Vaidyanatha Dikshita): Advanced Yoga rules.
+- **Uttara Kalamrita** (Kalidasa): Retrograde rules & house significations.
 
 ### Specialized Works & Computational Layers (Layers 2 - 9)
 - **Jaimini Upadesha Sutras**: Chara Dasha, Arudha Lagna, Karakamsha, Argala.
