@@ -6,6 +6,13 @@ This document serves as the master feature list and architectural specification 
 
 ## 📅 19-07-2026
 
+### 🏛️ Dharmic Open Access Mission (100% Free & Non-Commercialized)
+- **Core Philosophy**: Rooted in ancient Vedic tradition (*Dharma*), authentic sacred wisdom (*Vidya*) was created to enlighten and guide humanity, never to be monetized, paywalled, or commercialized.
+- **Marketing Positioning**:
+  - **Tagline**: *"Sacred Wisdom. Open to All."*
+  - **Positioning**: Elevated executive presentation—framed as a public gift and uncompromised decision engine rather than a cheap or freemium tool.
+  - **Promises**: 100% free lifetime access to all reports, zero hidden fees, zero paywalled features, and complete open transparency of classical source texts.
+
 ### 👨‍👩‍👧‍👦 Family & Generational Dynamics (Child & Parent Analysis)
 - **Overview**: Comprehensive astrological analysis of children and parents to foster conscious parenting and intergenerational harmony.
 - **Child Nurturing & Temperament**:

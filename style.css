@@ -364,6 +364,51 @@ header {
   color: var(--text-secondary);
 }
 
+/* Showcase 5: Dharmic Open Access Mission Layout */
+.philosophy-section {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
+}
+
+.dharma-grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 100%;
+}
+
+.dharma-pillar {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.dharma-pillar:hover {
+  border-top-color: var(--mint);
+}
+
+.dharma-num {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--mint);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.dharma-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.dharma-desc {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -379,5 +424,6 @@ footer {
   .full-width { padding: 0 1.5rem; }
   .career-grid-full { grid-template-columns: repeat(2, 1fr); }
   .family-grid-full { grid-template-columns: 1fr; }
+  .dharma-grid-full { grid-template-columns: 1fr; }
   .dest-stats-full { grid-template-columns: repeat(2, 1fr); }
 }
